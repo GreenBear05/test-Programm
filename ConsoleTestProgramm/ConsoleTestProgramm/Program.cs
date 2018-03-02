@@ -13,7 +13,7 @@ namespace ConsoleTestProgramm
             ClassCore cor = new ClassCore();
             String a = Convert.ToString(cor.silver);
               Console.WriteLine(a);
-           Console.WriteLine(Silver.get());
+           Console.WriteLine(cor.Silver);
             Console.ReadLine();
         }
     }
