@@ -10,6 +10,14 @@ namespace ConsoleTestProgramm
     {
         static void Main(string[] args)
         {
+
         }
+    }
+    class Core
+    {
+        int gold;
+        int silver;
+        int bronze;
+
     }
 }
