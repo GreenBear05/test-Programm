@@ -10,14 +10,12 @@ namespace ConsoleTestProgramm
     {
         static void Main(string[] args)
         {
-
+            ClassCore cor = new ClassCore();
+            String a = Convert.ToString(cor.silver);
+              Console.WriteLine(a);
+           Console.WriteLine(Silver.get());
+            Console.ReadLine();
         }
     }
-    class Core
-    {
-        int gold;
-        int silver;
-        int bronze;
 
-    }
 }
