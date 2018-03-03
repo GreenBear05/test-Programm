@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestProgramm
 {
-    class Classtest2 : Classtest
+    class Classtestt2 : Classtest
     {
        
     }

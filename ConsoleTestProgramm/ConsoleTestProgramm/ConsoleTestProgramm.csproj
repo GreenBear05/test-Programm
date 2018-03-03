@@ -45,6 +45,7 @@
     <Compile Include="ClassConsoleReadLaine.cs" />
     <Compile Include="ClassCore.cs" />
     <Compile Include="Classtest.cs" />
+    <Compile Include="Classtest2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

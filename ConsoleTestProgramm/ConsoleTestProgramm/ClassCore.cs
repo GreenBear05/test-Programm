@@ -26,7 +26,7 @@ namespace ConsoleTestProgramm
         {
             get
             {
-                return Coints % 10000 % 100 ;
+                return Coints % 100 ;
             }
        
         }
@@ -44,7 +44,7 @@ namespace ConsoleTestProgramm
         {
                 get
                 {
-                    return Coints  % 10000 / 100;
+                    return (Coints / 100)  % 100;
                 }
         }
 

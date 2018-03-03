@@ -26,5 +26,4 @@ namespace ConsoleTestProgramm
             Console.ReadLine();
         }
     }
-
 }
