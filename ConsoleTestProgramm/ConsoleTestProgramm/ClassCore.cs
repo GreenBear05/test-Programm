@@ -9,26 +9,33 @@ namespace ConsoleTestProgramm
     class ClassCore
     {
         private int coints = 10 ;
-
-        public int silver = 20;
-
-        public int Bronze
+        public int Coints
         {
             get
             {
-                return coints /*% 1000 % 100 / 1*/;
+                return coints;
             }
             set
             {
                 coints = value;
             }
         }
+       // public int silver = 20;
+
+        public int Bronze
+        {
+            get
+            {
+                return Coints % 10000 % 100 ;
+            }
+       
+        }
 
         public int Gold
         {
             get
             {
-                return Bronze / 1000;
+                return Coints / 10000;
             }
         }
 
@@ -37,7 +44,7 @@ namespace ConsoleTestProgramm
         {
                 get
                 {
-                    return Bronze  % 1000 / 10;
+                    return Coints  % 10000 / 100;
                 }
         }
 

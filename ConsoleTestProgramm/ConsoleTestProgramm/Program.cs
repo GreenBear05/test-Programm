@@ -13,9 +13,9 @@ namespace ConsoleTestProgramm
             ClassCore cor = new ClassCore();
             ClassConsoleReadLaine readLaine = new ClassConsoleReadLaine();
             int a = 1020123;
-            cor.Bronze = readLaine.ReadLaine();
+            cor.Coints = readLaine.ReadLaine();
 
-            Console.WriteLine("test vluve =  " + a);
+           // Console.WriteLine("test vluve =  " + a);
             Console.WriteLine("cor.Bronze =  " + cor.Bronze);
             Console.WriteLine("cor.Silver =  " + cor.Silver);
             Console.WriteLine("cor.Gold =  " + cor.Gold);
