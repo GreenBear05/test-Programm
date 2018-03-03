@@ -14,11 +14,11 @@ namespace ConsoleTestProgramm
             Classtest2 cortest2 = new Classtest2();
             ClassConsoleReadLaine readLaine = new ClassConsoleReadLaine();
             int a = 1020123;
-            cortest1.Coints = readLaine.ReadLaine();
-            cortest2.Coints = readLaine.ReadLaine();
+            cortest1.Coins = readLaine.ReadLaine();
+            cortest2.Coins = readLaine.ReadLaine();
 
 
-            Console.WriteLine("test vluve =  " + cortest2.Coints);
+            Console.WriteLine("test vluve =  " + cortest2.Coins);
             Console.WriteLine("cor.Bronze =  " + cortest1.Bronze);
             Console.WriteLine("cor.Silver =  " + cortest1.Silver);
             Console.WriteLine("cor.Gold =  " + cortest1.Gold);

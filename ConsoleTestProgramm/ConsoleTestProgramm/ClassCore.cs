@@ -8,16 +8,20 @@ namespace ConsoleTestProgramm
 {
     class Classtest
     {
-        private int coints;
-        public int Coints
+        public Classtest(int _coins) {
+            coins = _coins;
+        }
+
+        private int coins;
+        public int Coins
         {
             get
             {
-                return coints;
+                return coins;
             }
             set
             {
-                coints = value;
+                coins = value;
             }
         }
        // public int silver = 20;
@@ -26,7 +30,7 @@ namespace ConsoleTestProgramm
         {
             get
             {
-                return Coints % 10000 % 100 ;
+                return Coins % 10000 % 100 ;
             }
        
         }
@@ -35,7 +39,7 @@ namespace ConsoleTestProgramm
         {
             get
             {
-                return Coints / 10000;
+                return Coins / 10000;
             }
         }
 
@@ -44,10 +48,27 @@ namespace ConsoleTestProgramm
         {
                 get
                 {
-                    return Coints  % 10000 / 100;
+                    return Coins  % 10000 / 100;
                 }
         }
 
+        /// <summary>
+        /// Вариант перегрузки сложения
+        /// </summary>
+        /// <param name="op1"></param>
+        /// <param name="op2"></param>
+        /// <returns></returns>
+        public static Classtest operator +(Classtest op1, Classtest op2) {
+            return new Classtest(op1.coins + op2.coins);
+        }
+
+        /// <summary>
+        /// Так тоже можно для "коротких" выражений
+        /// </summary>
+        /// <param name="op1"></param>
+        /// <param name="op2"></param>
+        /// <returns></returns>
+        public static Classtest operator -(Classtest op1, Classtest op2) => new Classtest(op1.coins + op2.coins);
 
     }
 }
