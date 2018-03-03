@@ -27,7 +27,7 @@ namespace ConsoleTestProgramm.Units
         protected float DistanceAttack;
         public void Print()
         {
-            Console.WriteLine("Unit  :"+HP + " : " + MeleeAttack +"/"+ DistanceAttack);
+            Console.WriteLine("_"+this.Name+"_  :"+HP + " : " + MeleeAttack +"/"+ DistanceAttack);
         }
         
         public static void Battle(Unit unit1,Unit unit2,BattleField bf)
@@ -67,9 +67,9 @@ namespace ConsoleTestProgramm.Units
             while (unit1.HP > 0 && unit2.HP > 0)
             {
                 unit1.HP -= unit2attack;
-                Console.WriteLine("Удар по "+ unit1.Name + "  " + unit1.HP+"  урон по юниту 1  - "+unit2attack+"\n");
+                Console.WriteLine("Удар по _"+ unit1.Name + "_  " + unit1.HP+"  урон от _"+unit2.Name+"_ "+unit2attack+"\n");
                 unit2.HP -= unit1attack;
-                Console.WriteLine("Удар по " + unit2.Name + "  " + unit2.HP + "  урон по юниту 2  - " + unit1attack + "\n");
+                Console.WriteLine("Удар по _" + unit2.Name + "_  " + unit2.HP + "  урон от _" + unit1.Name + "_ " + unit1attack + "\n");
             }
         }
     }

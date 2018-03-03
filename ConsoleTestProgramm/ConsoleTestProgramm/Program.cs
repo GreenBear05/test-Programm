@@ -11,8 +11,8 @@ namespace ConsoleTestProgramm
     {
         static void Main(string[] args)
         {
-            Warrior warrior = new Warrior(hp: 50);
-            Archer archer = new Archer(hp:50,name:"юнит");
+            Warrior warrior = new Warrior(hp: 50,name: "Romic");
+            Archer archer = new Archer(hp:50,name:"Igor");
             warrior.Print();
             archer.Print();
             Unit.Battle(archer, warrior, BattleField.Mountain);
