@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestProgramm
 {
-    class Classtest
+    class Money
     {
-        public Classtest(int _coins) {
+        public Money(int _coins) {
             coins = _coins;
         }
 
@@ -58,8 +58,8 @@ namespace ConsoleTestProgramm
         /// <param name="op1"></param>
         /// <param name="op2"></param>
         /// <returns></returns>
-        public static Classtest operator +(Classtest op1, Classtest op2) {
-            return new Classtest(op1.coins + op2.coins);
+        public static Money operator +(Money op1, Money op2) {
+            return new Money(op1.coins + op2.coins);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace ConsoleTestProgramm
         /// <param name="op1"></param>
         /// <param name="op2"></param>
         /// <returns></returns>
-        public static Classtest operator -(Classtest op1, Classtest op2) => new Classtest(op1.coins + op2.coins);
+        public static Money operator -(Money op1, Money op2) => new Money(op1.coins + op2.coins);
 
     }
 }

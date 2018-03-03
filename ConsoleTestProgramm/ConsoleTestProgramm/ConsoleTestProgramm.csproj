@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassConsoleReadLaine.cs" />
-    <Compile Include="ClassCore.cs" />
-    <Compile Include="Classtest.cs" />
+    <Compile Include="Units\Unit.cs" />
+    <Compile Include="Interactions.cs" />
+    <Compile Include="Money.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

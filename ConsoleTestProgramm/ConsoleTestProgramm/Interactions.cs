@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestProgramm
 {
-    class ClassConsoleReadLaine
+    public static class Interactions
     {
-        public int ReadLaine()
+        static public int ReadLaine(string msg)
         {
+            Console.Write(msg + "  >  ");
             string x;
-            x = Console.ReadLine() ;
+            x = Console.ReadLine();
             return Convert.ToInt32(x);
         }
     }
