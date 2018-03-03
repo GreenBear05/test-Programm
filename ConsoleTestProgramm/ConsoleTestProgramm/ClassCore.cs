@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestProgramm
 {
-    class ClassCore
+    class Classtest
     {
-        private int coints = 10 ;
+        private int coints;
         public int Coints
         {
             get

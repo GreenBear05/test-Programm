@@ -10,15 +10,18 @@ namespace ConsoleTestProgramm
     {
         static void Main(string[] args)
         {
-            ClassCore cor = new ClassCore();
+            Classtest cortest1 = new Classtest();
+            Classtest2 cortest2 = new Classtest2();
             ClassConsoleReadLaine readLaine = new ClassConsoleReadLaine();
             int a = 1020123;
-            cor.Coints = readLaine.ReadLaine();
+            cortest1.Coints = readLaine.ReadLaine();
+            cortest2.Coints = readLaine.ReadLaine();
 
-           // Console.WriteLine("test vluve =  " + a);
-            Console.WriteLine("cor.Bronze =  " + cor.Bronze);
-            Console.WriteLine("cor.Silver =  " + cor.Silver);
-            Console.WriteLine("cor.Gold =  " + cor.Gold);
+
+            Console.WriteLine("test vluve =  " + cortest2.Coints);
+            Console.WriteLine("cor.Bronze =  " + cortest1.Bronze);
+            Console.WriteLine("cor.Silver =  " + cortest1.Silver);
+            Console.WriteLine("cor.Gold =  " + cortest1.Gold);
             Console.ReadLine();
             Console.ReadLine();
         }
