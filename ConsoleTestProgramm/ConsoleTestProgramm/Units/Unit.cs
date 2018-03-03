@@ -27,7 +27,7 @@ namespace ConsoleTestProgramm.Units
         protected float DistanceAttack;
         public void Print()
         {
-            Console.WriteLine("Unit  :"+HP + " : " + MeleeAttack +"/"+ DistanceAttack);
+            Console.WriteLine(Name+" [HP: "+HP + " : " + MeleeAttack +"/"+ DistanceAttack+"]");
         }
         
         public static void Battle(Unit unit1,Unit unit2,BattleField bf)

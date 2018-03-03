@@ -11,11 +11,21 @@ namespace ConsoleTestProgramm
     {
         static void Main(string[] args)
         {
-            Warrior warrior = new Warrior(hp: 50);
-            Archer archer = new Archer(hp:50,name:"юнит");
-            warrior.Print();
-            archer.Print();
-            Unit.Battle(archer, warrior, BattleField.Mountain);
+            //Warrior warrior = new Warrior(hp: 50);
+            //Archer archer = new Archer(hp:50,name:"юнит");
+            //warrior.Print();
+            //archer.Print();
+
+            List<Unit> Units = new List<Unit>();
+            Units.Add(new Warrior(hp: 50));
+            Units.Add(new Archer(hp: 50, name: "юнит"));
+
+            foreach (var item in Units)
+            {
+                item.Print();
+            }
+
+            //Unit.Battle(archer, warrior, BattleField.Mountain);
             Console.ReadKey();
             
 
