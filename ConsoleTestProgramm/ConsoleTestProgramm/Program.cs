@@ -19,9 +19,9 @@ namespace ConsoleTestProgramm
             //  archer.Print();
             //  Unit.Battle(archer, warrior, BattleField.Mountain);
             //  Console.ReadKey();
-            Army army1 = new Army();
+            Army army1 = new Army("армия пидора");
             army1.Units.Add(new Warrior(hp: 50, name: "Romic"));
-
+            Console.WriteLine(army1.namearmy);
             List<Unit> Units = new List<Unit>();
             Units.Add(new Warrior(hp: 50, name: "Romic"));
             Units.Add(new Archer(hp: 50, name: "sergyi"));
@@ -32,12 +32,12 @@ namespace ConsoleTestProgramm
             {
                 item.Print();
             }
-            int i =1;
-            foreach (var item in Units)
-            {
-                i++;
-                Unit.Battle(item, item, BattleField.Mountain);
-            }
+           // int i =1;
+           // foreach (var item in Units)
+           // {
+           //     i++;
+           //     Unit.Battle(item, item, BattleField.Mountain);
+           // }
           // Money moneyshops = new Money(5646);
           // Money moneyucer = new Money(444651);
           // Console.WriteLine(moneyucer.Coins + "   " + moneyucer.Bronze + "   " + moneyucer.Silver + "   " + moneyucer.Gold);
