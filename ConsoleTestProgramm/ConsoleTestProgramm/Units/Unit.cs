@@ -8,13 +8,13 @@ namespace ConsoleTestProgramm.Units
 {
     class Unit
     {
-        protected Unit(float hp,string name)
+        protected Unit(float HP,string name)
         {
             
-            HP = hp;
+            _HP = HP;
             Name = name;
         }
-        private float HP;
+        private float _HP;
 
         private string Name;
         /// <summary>
@@ -27,10 +27,14 @@ namespace ConsoleTestProgramm.Units
         protected float DistanceAttack;
         public void Print()
         {
-            Console.WriteLine(this.Name + " [HP: " + HP + " : " + MeleeAttack + "/" + DistanceAttack + "]");
+            //   Console.WriteLine(this.Name + " [HP: " + HP + " : " + MeleeAttack + "/" + DistanceAttack + "]");
+            Interactions.Write(this.Name + " [HP: ");
+            Interactions.Write(_HP.ToString(),ConsoleColor.Red);
+            Interactions.Write(" : " + MeleeAttack + "/" + DistanceAttack + "]\n");
+
         }
 
-        public static void Battle(Unit unit1,Unit unit2,BattleField bf)
+        public static void Battle(Unit unit1, Unit unit2, BattleField bf)
         {
             float unit1attack;
             float unit2attack;
@@ -43,8 +47,8 @@ namespace ConsoleTestProgramm.Units
                     break;
                 case BattleField.Forest:
                     Console.WriteLine(" Бой лес");
-                    unit1attack = unit1.MeleeAttack * 1.5f + unit1.DistanceAttack ;
-                    unit2attack = unit2.DistanceAttack  + unit2.MeleeAttack * 1.5f;
+                    unit1attack = unit1.MeleeAttack * 1.5f + unit1.DistanceAttack;
+                    unit2attack = unit2.DistanceAttack + unit2.MeleeAttack * 1.5f;
                     break;
                 case BattleField.Snou:
                     Console.WriteLine(" Бой снежная равнина");
@@ -53,8 +57,8 @@ namespace ConsoleTestProgramm.Units
                     break;
                 case BattleField.Mountain:
                     Console.WriteLine(" Бой горная месность ");
-                    
-                    unit1attack = unit1.MeleeAttack*0.9f + unit1.DistanceAttack;
+
+                    unit1attack = unit1.MeleeAttack * 0.9f + unit1.DistanceAttack;
                     unit2attack = unit2.DistanceAttack + unit2.MeleeAttack * 0.9f;
                     break;
                 default:
@@ -63,14 +67,34 @@ namespace ConsoleTestProgramm.Units
                     unit2attack = unit2.DistanceAttack + unit2.MeleeAttack;
                     break;
             }
-            
-            while (unit1.HP > 0 && unit2.HP > 0)
+
+            while (unit1._HP > 0 && unit2._HP > 0)
             {
-                unit1.HP -= unit2attack;
-                Console.WriteLine("Удар по _"+ unit1.Name + "_  " + unit1.HP+"  урон от _"+unit2.Name+"_ "+unit2attack+"\n");
-                unit2.HP -= unit1attack;
-                Console.WriteLine("Удар по _" + unit2.Name + "_  " + unit2.HP + "  урон от _" + unit1.Name + "_ " + unit1attack + "\n");
+                System.Threading.Thread.Sleep(1000);
+                unit1._HP -= unit2attack;
+                Interactions.WriteMacroLine("Удар по _","f:green",unit1.Name,"def","_  " ,"f:red", unit1._HP.ToString() ,"def", "  урон от _" , "f:green", unit2.Name, "def", "_   Сила атаки  " , "f:blue", unit2attack.ToString(),  "def");
+                unit2._HP -= unit1attack;
+                Interactions.WriteMacroLine("Удар по _", "f:green", unit2.Name, "def", "_  ", "f:red", unit2._HP.ToString(), "def", "  урон от _", "f:green", unit1.Name, "def", "_   Сила атаки  ", "f:blue", unit1attack.ToString(), "def","\n");
+            }
+            if(!unit1.IsAlive)
+            {
+                Interactions.WriteLine(unit1.Name+"  мертв");
+            }
+            if (!unit2.IsAlive)
+            {
+                Interactions.WriteLine(unit2.Name+"  мертв");
+            }
+        }
+        /// <summary>
+        /// проверка метв или юнит
+        /// </summary>
+            public bool IsAlive
+        {
+            get
+            {
+                return _HP > 0;
             }
         }
     }
+    
 }
