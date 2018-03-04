@@ -19,6 +19,8 @@ namespace ConsoleTestProgramm
             //  archer.Print();
             //  Unit.Battle(archer, warrior, BattleField.Mountain);
             //  Console.ReadKey();
+            Army army1 = new Army();
+            army1.Units.Add(new Warrior(hp: 50, name: "Romic"));
 
             List<Unit> Units = new List<Unit>();
             Units.Add(new Warrior(hp: 50, name: "Romic"));
@@ -26,7 +28,7 @@ namespace ConsoleTestProgramm
             Units.Add(new Warrior(hp: 50, name: "vasay"));
             Units.Add(new Archer(hp: 150, name: "Igor"));
 
-            foreach (var item in Units)
+            foreach (var item in army1.Units)
             {
                 item.Print();
             }
@@ -36,14 +38,15 @@ namespace ConsoleTestProgramm
                 i++;
                 Unit.Battle(item, item, BattleField.Mountain);
             }
-            for (; true;)
-            {
-                System.Threading.Thread.Sleep(1000);
-                Console.WriteLine(DateTime.Now);
-            }
-            
-
-            Console.ReadKey();
+          // Money moneyshops = new Money(5646);
+          // Money moneyucer = new Money(444651);
+          // Console.WriteLine(moneyucer.Coins + "   " + moneyucer.Bronze + "   " + moneyucer.Silver + "   " + moneyucer.Gold);
+          // Console.WriteLine(moneyshops.Coins + "   " + moneyshops.Bronze + "   " + moneyshops.Silver + "   " + moneyshops.Gold);
+          // moneyucer -= moneyshops;
+          //
+          // Console.WriteLine(moneyucer.Coins +"   "+ moneyucer.Bronze +"   "+ moneyucer.Silver +"   "+moneyucer.Gold);
+          // Console.WriteLine(moneyshops.Coins + "   " + moneyshops.Bronze + "   " + moneyshops.Silver + "   " + moneyshops.Gold);
+          // Console.ReadKey();
 
         }
     }

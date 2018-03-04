@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Units\Archer.cs" />
+    <Compile Include="Units\Army.cs" />
     <Compile Include="Units\BattleField.cs" />
     <Compile Include="Units\Unit.cs" />
     <Compile Include="Interactions.cs" />

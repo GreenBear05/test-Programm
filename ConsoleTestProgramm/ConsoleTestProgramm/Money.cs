@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestProgramm
 {
+    /// <summary>
+    /// Money - класс монетки 
+    /// </summary>
     class Money
     {
         public Money(int _coins) {
@@ -68,7 +71,16 @@ namespace ConsoleTestProgramm
         /// <param name="op1"></param>
         /// <param name="op2"></param>
         /// <returns></returns>
-        public static Money operator -(Money op1, Money op2) => new Money(op1.coins + op2.coins);
+        //public static Money operator -(Money op1, Money op2) => new Money(op1.coins - op2.coins);
+        public static Money operator -(Money op1, Money op2)
+        {
+            if (op1.coins - op2.coins > 0)
+            { return new Money(op1.coins - op2.coins); }
+            else
+                return op1;
+
+
+        }
 
     }
 }
