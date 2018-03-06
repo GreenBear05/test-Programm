@@ -1,0 +1,13 @@
+diff a/ConsoleTestProgramm/ConsoleTestProgramm/Program.cs b/ConsoleTestProgramm/ConsoleTestProgramm/Program.cs	(rejected hunks)
+@@ -19,9 +19,9 @@
+             //  archer.Print();
+             //  Unit.Battle(archer, warrior, BattleField.Mountain);
+             //  Console.ReadKey();
+-            Army army1 = new Army();
++            Army army1 = new Army("армия пидора");
+             army1.Units.Add(new Warrior(hp: 50, name: "Romic"));
+-
++            Console.WriteLine(army1.namearmy);
+             List<Unit> Units = new List<Unit>();
+             Units.Add(new Warrior(hp: 50, name: "Romic"));
+             Units.Add(new Archer(hp: 50, name: "sergyi"));
