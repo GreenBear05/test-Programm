@@ -11,8 +11,7 @@ namespace ConsoleTestProgramm
     {
         static void Main(string[] args)
         {
-            Interactions.WriteMacroLine("f:red", "This is Red ", "f:Blue", "BLUE!!!!","feisrol");
-            Interactions.WriteMacroLine("f:red", "This is Red ", "b:Blue", "f:green","BLUE!!!!");
+           
             //  Warrior warrior = new Warrior(hp: 50, name: "Romic");
             //  Archer archer = new Archer(hp: 50, name: "Igor");
             //  Console.ForegroundColor = ConsoleColor.Green; // устанавливаем цвет
@@ -21,13 +20,15 @@ namespace ConsoleTestProgramm
             //  archer.Print();
             //  Unit.Battle(archer, warrior, BattleField.Mountain);
             //  Console.ReadKey();
+
             Army army1 = new Army("армия Востание легиона");
             army1.Units.Add(new Warrior(hp: 50, name: "Romic"));
             army1.Units.Add(new Archer(1000,hp: 10, name: "Igor"));
             army1.Units.Add(new Archer(hp: 150, name: "Igor"));
             army1.Units.Add(new Archer(hp: 120, name: "Igor"));
             army1.Units.Add(new Archer(hp: 160, name: "Igor"));
-            Army army2 = new Army("армия pidor");
+
+            Army army2 = new Army("армия горн");
             army2.Units.Add(new Warrior(hp: 500, name: "Romic"));
             army2.Units.Add(new Warrior(hp: 500, name: "Romic"));
             army2.Units.Add(new Warrior(hp: 500, name: "Romic"));

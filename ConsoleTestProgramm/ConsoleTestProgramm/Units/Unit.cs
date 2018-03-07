@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleTestProgramm.Units
 {
+    /// <summary>
+    /// Класс юнит 
+    /// </summary>
     class Unit
     {
         protected Unit(float HP,string name)
@@ -25,6 +28,9 @@ namespace ConsoleTestProgramm.Units
         ///  DistanceAttack для дальнего боя
         /// </summary>
         protected float DistanceAttack;
+        /// <summary>
+        /// Вывод данных о сзданнных юнитах
+        /// </summary>
         public void Print()
         {
             //   Console.WriteLine(this.Name + " [HP: " + HP + " : " + MeleeAttack + "/" + DistanceAttack + "]");
@@ -33,7 +39,12 @@ namespace ConsoleTestProgramm.Units
             Interactions.Write(" : " + MeleeAttack + "/" + DistanceAttack + "]\n");
 
         }
-
+        /// <summary>
+        /// Сражение меду 2 юнитами
+        /// </summary>
+        /// <param name="unit1">первый </param>
+        /// <param name="unit2"></param>
+        /// <param name="bf"></param>
         public static void Battle(Unit unit1, Unit unit2, BattleField bf)
         {
             float unit1attack;
