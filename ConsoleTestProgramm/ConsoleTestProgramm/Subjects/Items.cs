@@ -8,5 +8,16 @@ namespace ConsoleTestProgramm.Subjects
 {
     class Items
     {
+        private string _NameItems;
+        private string NameItems
+        {
+            get
+            {
+                return _NameItems;
+            }
+        }
+        public void 
+
+        
     }
 }
