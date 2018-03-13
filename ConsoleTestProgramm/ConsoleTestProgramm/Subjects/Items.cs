@@ -12,10 +12,15 @@ namespace ConsoleTestProgramm.Subjects
         {
             get
             {
-                NameItms = _NameItems;
+                return _NameItems;
             }
         }
-           
+
         private string _NameItems;
+    }
+
+    public void add()
+    {
+
     }
 }
