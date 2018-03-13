@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Subjects\Items.cs" />
     <Compile Include="Units\Archer.cs" />
     <Compile Include="Units\Army.cs" />
     <Compile Include="Units\BattleField.cs" />
@@ -55,5 +56,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

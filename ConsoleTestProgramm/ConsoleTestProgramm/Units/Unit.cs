@@ -13,7 +13,6 @@ namespace ConsoleTestProgramm.Units
     {
         protected Unit(float HP,string name)
         {
-            
             _HP = HP;
             Name = name;
         }
@@ -42,9 +41,9 @@ namespace ConsoleTestProgramm.Units
         /// <summary>
         /// Сражение меду 2 юнитами
         /// </summary>
-        /// <param name="unit1">первый </param>
-        /// <param name="unit2"></param>
-        /// <param name="bf"></param>
+        /// <param name="unit1">первый юнит</param>
+        /// <param name="unit2">Второй юнит</param>
+        /// <param name="bf">Тип пля</param>
         public static void Battle(Unit unit1, Unit unit2, BattleField bf)
         {
             float unit1attack;
